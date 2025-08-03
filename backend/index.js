@@ -15,7 +15,6 @@ const { MONGO_URL, PORT } = process.env;
 const { PositionsModel } = require('./models/PositionsModel');
 const { HoldingsModel } = require('./models/HoldingsModel');
 const { OrderModel } = require('./models/OrderModel');
-// const { UserModel } = require('./models/UserModel');
 
 
 
@@ -38,7 +37,7 @@ mongoose
 
 app.use(
   cors({
-    origin: ["https://tradeshala.onrender.com", "https://tradeshala-dashboard.onrender.com"],
+    origin: [  process.env.REACT_APP_FRONTEND_URL, process.env.REACT_APP_DASHBOARD_URL],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

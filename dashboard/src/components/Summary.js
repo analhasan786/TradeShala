@@ -10,12 +10,12 @@ const Summary = () => {
   useEffect(() => {
     const verifyCookie = async () => {
       if (!cookies.token) {
-        window.location.href = `${process.env.React_frontend}/login`;
+        window.location.href = "http://localhost:3001/login";
         return;
       }
       try {
         const { data } = await axios.post(
-          `${process.env.React_backend}`,
+          "http://localhost:3002",
           {},
           { withCredentials: true }
         );
@@ -29,11 +29,11 @@ const Summary = () => {
           toast(`Hello ${user.username}`, { position: "top-right", toastId: "welcome-toast" });
         } else {
           removeCookie("token");
-          window.location.href = `${process.env.React_frontend}`;
+          window.location.href = "http://localhost:3001";
         }
       } catch (error) {
         removeCookie("token");
-        window.location.href = `${process.env.React_frontend}`;
+        window.location.href = "http://localhost:3001";
       }
     };
 
