@@ -38,7 +38,7 @@ mongoose
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: ["https://tradeshala.onrender.com", "https://tradeshala-dashboard.onrender.com"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

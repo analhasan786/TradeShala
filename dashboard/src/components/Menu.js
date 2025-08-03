@@ -28,7 +28,7 @@ const Menu = () => {
 
   const Logout = () => {
     removeCookie("token");
-    window.location.href = "http://localhost:3000";
+    window.location.href = `${process.env.frontend}`;
   };
 
 

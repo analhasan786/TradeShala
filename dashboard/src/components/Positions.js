@@ -6,7 +6,7 @@ const Positions = () => {
     const[allPosition, setaAllPosition] = useState([]);
 
    useEffect(()  => {
-      axios.get("http://localhost:3002/addPosition").then((res) => {
+      axios.get(`${process.env.React_backend}/addPosition`).then((res) => {
         //  console.log(res.data);
          setaAllPosition(res.data);
       })
