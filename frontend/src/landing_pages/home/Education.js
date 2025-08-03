@@ -2,7 +2,7 @@ import React from 'react';
 
 function Education() {
     return (
-        <div className='container-fluid mt-3'>
+        <div className='container mt-3'>
             <div className='row mt-5'>
                 <div className='col-12 col-lg-6  mb-1 '>
                     <div className='text mb-5'>
