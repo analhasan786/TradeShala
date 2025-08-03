@@ -10,12 +10,12 @@ const Summary = () => {
   useEffect(() => {
     const verifyCookie = async () => {
       if (!cookies.token) {
-        window.location.href = "http://localhost:3001/login";
+        window.location.href = "https://tradeshala-dashboard.onrender.com/login";
         return;
       }
       try {
         const { data } = await axios.post(
-          "http://localhost:3002",
+          "https://tradeshala-backend.onrender.com",
           {},
           { withCredentials: true }
         );
@@ -29,11 +29,11 @@ const Summary = () => {
           toast(`Hello ${user.username}`, { position: "top-right", toastId: "welcome-toast" });
         } else {
           removeCookie("token");
-          window.location.href = "http://localhost:3001";
+          window.location.href = "https://tradeshala-dashboard.onrender.com";
         }
       } catch (error) {
         removeCookie("token");
-        window.location.href = "http://localhost:3001";
+        window.location.href = "https://tradeshala-dashboard.onrender.com";
       }
     };
 

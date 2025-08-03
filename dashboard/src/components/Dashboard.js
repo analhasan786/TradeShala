@@ -28,7 +28,7 @@ const Dashboard = () => {
     const token = localStorage.getItem('token');
     if (!token) {
       // No token → redirect to frontend login
-      window.location.href = 'http://localhost:3000';
+      window.location.href = 'https://tradeshala.onrender.com';
     }
   }, []);
 
