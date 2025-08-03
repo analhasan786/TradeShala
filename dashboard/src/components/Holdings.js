@@ -8,7 +8,7 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allHoldings").then((res) => {
+    axios.get("http://localhost:3002/allHolding").then((res) => {
       // console.log(res.data);
       setAllHoldings(res.data);
     });
@@ -50,6 +50,7 @@ const Holdings = () => {
 
       <div className="order-table">
         <table>
+          <tbody>
           <tr>
             <th>Instrument</th>
             <th>Qty.</th>
@@ -82,6 +83,7 @@ const Holdings = () => {
               </tr>
             );
           })}
+          </tbody>
         </table>
       </div>
 

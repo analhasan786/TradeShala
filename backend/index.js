@@ -37,7 +37,7 @@ mongoose
 
 app.use(
   cors({
-    origin: [  process.env.REACT_APP_FRONTEND_URL, process.env.REACT_APP_DASHBOARD_URL],
+    origin: ["https://tradeshala.onrender.com", "https://tradeshala-dashboard.onrender.com"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

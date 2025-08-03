@@ -35,7 +35,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/login`,
+        "https://tradeshala-backend.onrender.com/login",
         {
           ...inputValue,
         },
@@ -46,7 +46,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = process.env.REACT_APP_DASHBOARD_URL;
+          window.location.href = "https://tradeshala-dashboard.onrender.com";
         }, 1000);
       } else {
         handleError(message);

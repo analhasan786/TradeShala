@@ -4,7 +4,7 @@ import React from 'react';
 const Logout = () => {
   const handleLogout = () => {
     localStorage.removeItem('token');
-    window.location.href = process.env.REACT_APP_FRONTEND_URL; // Redirect to login/signup app
+    window.location.href = 'http://localhost:3000'; // Redirect to login/signup app
   };
 
   return (
