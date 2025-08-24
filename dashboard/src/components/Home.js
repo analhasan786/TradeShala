@@ -4,7 +4,7 @@ import { CookiesProvider } from "react-cookie";
 
 // import TopBar from './TopBar';
 //  < TopBar />
-import Dashboard from './Dashboard';
+// import Dashboard from './Dashboard';
 import Menu from "./Menu";
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
             <Menu />
 
             {/* < TopBar /> */}
-            < Dashboard />
+            {/* < Dashboard /> */}
 
         </CookiesProvider>
     );
