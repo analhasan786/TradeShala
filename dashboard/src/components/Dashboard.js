@@ -7,7 +7,7 @@ import Funds from "./Funds";
 import Holdings from "./Holdings";
 import Orders from "./Orders";
 import Positions from "./Positions";
-import Summary from "./Summary";
+// import Summary from "./Summary";
 import WatchList from "./WatchList";
 import { GeneralContextProvider } from "./GeneralContext";
 
@@ -19,7 +19,7 @@ const Dashboard = () => {
     const verifyUser = async () => {
       try {
         const { data } = await axios.post(
-          "https://tradeshala-backend.onrender.com/verify", 
+          "https://tradeshala-backend.onrender.com", 
           {}, 
           { withCredentials: true }  // 👈 send cookies automatically
         );
@@ -54,7 +54,7 @@ const Dashboard = () => {
       <div className="content">
         <h4>Welcome {username}</h4>
         <Routes>
-          <Route path="/" element={<Summary />} />
+          {/* <Route path="/" element={<Summary />} /> */}
           <Route path="/orders" element={<Orders />} />
           <Route path="/holdings" element={<Holdings />} />
           <Route path="/positions" element={<Positions />} />
