@@ -28,7 +28,7 @@ const Dashboard = () => {
           setUsername(data.user.username);
         } else {
           // not authenticated → redirect to login app
-          window.location.href = "https://tradeshala.onrender.com/login";
+          window.location.href = "https://tradeshala.onrender.com";
         }
       } catch (err) {
         // error → redirect to login
